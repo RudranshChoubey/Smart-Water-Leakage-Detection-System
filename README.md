@@ -35,13 +35,15 @@ Instead of relying solely on reactive, threshold-based alerts, this system utili
 🎮 Usage Guide
 Step 1: Train the Machine Learning Model
 Before running the dashboard, you must train the model and generate the water_leak_model.pkl file.
+
 python train_model.py
 
 This script generates 5,000 synthetic data points, trains a Random Forest Classifier, outputs accuracy metrics to the terminal, and saves the trained model.
 
 Step 2: Launch the Simulator
 Once the .pkl file is generated, launch the interactive dashboard:
-streamlit run leak_sim.py
+
+streamlit run app.py
 
 This will open a new browser tab at http://localhost:8501. Adjust the sliders to drop the flow/pressure and spike the moisture to watch the AI trigger the leak animation.
 
